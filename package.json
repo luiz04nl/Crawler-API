@@ -1,0 +1,39 @@
+{
+  "name": "luiz_carlos_crawler",
+  "version": "0.0.1",
+  "description": "Crawler",
+  "main": "index.js",
+  "scripts": {
+    "api": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Luiz Carlos",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "https": "^1.0.0",
+    "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.1.0",
+    "newman": "^4.6.0",
+    "newman-reporter-html": "^1.0.5",
+    "nodemon": "^2.0.2",
+    "prettier": "^2.0.2"
+  }
+}
