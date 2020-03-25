@@ -1,3 +1,36 @@
-node_modules
-.vscode
+# Logs
+*.log
+
+# Lock files
+package-lock.json
+
+# IDE's
+.vscode/
+.idea/
+
+# Dependency directories
+node_modules/
+.npm
+
+# Yarn Integrity file
+.yarn-integrity
+yarn.lock
+
 todo.txt
+
+newman
+# postman-test*
+
+.env
+!env.example
+
+dist
+
+tmp
+tmp.json
+res.txt
+
+## Terraform
+*.tfvars
+.terraform
+.backup

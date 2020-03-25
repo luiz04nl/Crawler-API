@@ -1,0 +1,29 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": "commonjs",
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "sourceMaps": "inline",
+  "retainLines": true,
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "absoluteRuntime": false,
+        "corejs": false,
+        "helpers": true,
+        "regenerator": true,
+        "useESModules": false
+      }
+    ] 
+    // "transform-es2015-destructuring",
+    // "transform-object-rest-spread"
+  ]
+}
