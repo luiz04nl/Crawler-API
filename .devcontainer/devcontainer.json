@@ -1,0 +1,16 @@
+{
+  "name": "Crawler API Debug",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "dockerComposeFile": ["docker-compose.debug.yml"],
+  "service": "crawler-api-local-debug",
+  "workspaceFolder": "/workspaces/crawler-api-local",
+  "shutdownAction": "stopCompose",
+  "extensions": [
+    "ms-vscode-remote.remote-containers",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode"
+  ]
+}

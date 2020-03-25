@@ -8,6 +8,7 @@ const ProductRoutes = (route) => {
         res.api.send(success, res.api.codes.OK)
       })
       .catch((err) => {
+        console.log('LUIZ err', err)
         res.api.send(err, res.api.codes.INTERNAL_SERVER_ERROR)
       })
   })

@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  crawler-api-base:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: base
+    container_name: crawler-api-base
+    image: crawler-api-base:latest
+
+  crawler-api-build:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: build
+    container_name: crawler-api-build
+    image: crawler-api-build:latest
+
+  crawler-api-test-unit:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: test-unit
+    container_name: crawler-api-test-unit
+    image: crawler-api-test-unit:latest
+
+  crawler-api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: crawler-api
+    image: crawler-api:latest

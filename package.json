@@ -7,9 +7,10 @@
     "start": "export NODE_ENV='local' && nodemon --exec babel-node src/index.js",
     "lint": "eslint --ext .ts,.js src",
     "unit": "export NODE_ENV='test' && jest --detectOpenHandles src",
+    "test-integration-postman": "newman run Crawler.postman_collection.json --insecure --reporters cli,html",
     "clean": "rm -rf dist && mkdir dist",
     "build": "babel -d ./dist ./src -s",
-    "start-dist": "node ./dist/app.js"
+    "start-dist": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "Luiz Carlos",

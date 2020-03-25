@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  crawler-api:
+    env_file:
+      - .env
+    container_name: crawler-api-local
+    image: crawler-api:latest
+    restart: always
+    ports:
+      - '3000:3000'

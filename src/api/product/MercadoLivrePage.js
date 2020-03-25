@@ -19,7 +19,9 @@ export class MercadoLivrePage {
     this.browser = await puppeteer.launch({
       headless: true,
       // headless: false
+      args: ['--no-sandbox'],
     })
+
     this.page = await this.browser.newPage()
   }
 

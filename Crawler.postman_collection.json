@@ -1,155 +1,144 @@
 {
-	"info": {
-		"_postman_id": "ff517dc0-8060-4650-bf75-442e22edbc98",
-		"name": "Crawler",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "Obter Produtos",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "db4c5859-330e-4f26-89ec-da3f85505743",
-						"exec": [
-							"pm.test(\"Deve retornar 200\", function () {",
-							"     pm.response.to.have.status(200)",
-							"     pm.response.to.be.withBody;",
-							"     pm.response.to.be.json;",
-							"});",
-							"",
-							"",
-							"pm.test(\"Deve retonar os dados da linha\", function () {",
-							"     pm.expect(pm.response.text()).to.include(\"name\");",
-							"     pm.expect(pm.response.text()).to.include(\"link\");",
-							"     pm.expect(pm.response.text()).to.include(\"price\");",
-							"     pm.expect(pm.response.text()).to.include(\"store\");",
-							"     pm.expect(pm.response.text()).to.include(\"state\");",
-							"});  ",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"search\": \"ps4 pro\",\n\t\"limit\": 5\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://127.0.0.1:3000/api/product",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"product"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "Obter Produtos",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"search\": \"ps4 pro\",\n\t\"limit\": 5\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "/api/product",
-							"path": [
-								"api",
-								"product"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Methods",
-							"value": "GET, POST, PUT, DELETE, OPTIONS"
-						},
-						{
-							"key": "Access-Control-Allow-Headers",
-							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"6cb-x/1JheQVzlCNCCo63YJzaCsxrxk\""
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "Content-Encoding",
-							"value": "gzip"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 25 Mar 2020 01:41:13 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						}
-					],
-					"cookie": [],
-					"body": "[\n    {\n        \"name\": \"10 Milhoes - Dinheiro Para Gta V Online Ps4\",\n        \"link\": \"https://produto.mercadolivre.com.br/MLB-1300493643-10-milhoes-dinheiro-para-gta-v-online-ps4-_JM?searchVariation=42256710031#searchVariation=42256710031&position=15&type=item&tracking_id=882ec2e8-2374-4c46-9b7f-3f4689010a99\",\n        \"price\": 27,\n        \"store\": null,\n        \"state\": null\n    },\n    {\n        \"name\": \"Kit 15 Em 1 De Ps4 Slim E Ps4 Pro Acessórios Playstation 4\",\n        \"link\": \"https://produto.mercadolivre.com.br/MLB-1466339396-kit-15-em-1-de-ps4-slim-e-ps4-pro-acessorios-playstation-4-_JM?searchVariation=52267526566#searchVariation=52267526566&position=44&type=item&tracking_id=882ec2e8-2374-4c46-9b7f-3f4689010a99\",\n        \"price\": 79,\n        \"store\": null,\n        \"state\": null\n    },\n    {\n        \"name\": \"Nacon Revolution Unlimited Pro Controller - Ps4\",\n        \"link\": \"https://produto.mercadolivre.com.br/MLB-1175945115-nacon-revolution-unlimited-pro-controller-ps4-_JM?searchVariation=32752913408#searchVariation=32752913408&position=10&type=item&tracking_id=882ec2e8-2374-4c46-9b7f-3f4689010a99\",\n        \"price\": 979,\n        \"store\": null,\n        \"state\": null\n    },\n    {\n        \"name\": \"Playstation 4 Pro 1tb Ps4 4k Biv. 2 Controles Envio Imediato\",\n        \"link\": \"https://produto.mercadolivre.com.br/MLB-1075976678-playstation-4-pro-1tb-ps4-4k-biv-2-controles-envio-imediato-_JM?searchVariation=32041146653#searchVariation=32041146653&position=13&type=item&tracking_id=882ec2e8-2374-4c46-9b7f-3f4689010a99\",\n        \"price\": 3300,\n        \"store\": null,\n        \"state\": null\n    },\n    {\n        \"name\": \"Playstation 4 Pro Ps4 1tb 4k 2 Controles 1 Ano De Garantia\",\n        \"link\": \"https://produto.mercadolivre.com.br/MLB-1070617416-playstation-4-pro-ps4-1tb-4k-2-controles-1-ano-de-garantia-_JM?searchVariation=32906102683#searchVariation=32906102683&position=23&type=item&tracking_id=882ec2e8-2374-4c46-9b7f-3f4689010a99\",\n        \"price\": 3657,\n        \"store\": null,\n        \"state\": null\n    }\n]"
-				}
-			]
-		}
-	],
-	"protocolProfileBehavior": {}
+  "info": {
+    "_postman_id": "ff517dc0-8060-4650-bf75-442e22edbc98",
+    "name": "Crawler",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Obter Produtos",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "db4c5859-330e-4f26-89ec-da3f85505743",
+            "exec": [
+              "pm.test(\"Deve retornar 200\", function () {",
+              "     pm.response.to.have.status(200)",
+              "     pm.response.to.be.withBody;",
+              "     pm.response.to.be.json;",
+              "});",
+              "",
+              "",
+              "pm.test(\"Deve retonar os dados\", function () {",
+              "     pm.expect(pm.response.text()).to.include(\"name\");",
+              "     pm.expect(pm.response.text()).to.include(\"link\");",
+              "     pm.expect(pm.response.text()).to.include(\"price\");",
+              "     pm.expect(pm.response.text()).to.include(\"store\");",
+              "     pm.expect(pm.response.text()).to.include(\"state\");",
+              "});  ",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"search\": \"ps4 pro\",\n\t\"limit\": 5\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:3000/api/product",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "3000",
+          "path": ["api", "product"]
+        }
+      },
+      "response": [
+        {
+          "name": "Obter Produtos",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"search\": \"ps4 pro\",\n\t\"limit\": 5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "/api/product",
+              "path": ["api", "product"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"6cb-x/1JheQVzlCNCCo63YJzaCsxrxk\""
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 25 Mar 2020 01:41:13 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"name\": \"10 Milhoes - Dinheiro Para Gta V Online Ps4\",\n        \"link\": \"https://produto.mercadolivre.com.br/MLB-1300493643-10-milhoes-dinheiro-para-gta-v-online-ps4-_JM?searchVariation=42256710031#searchVariation=42256710031&position=15&type=item&tracking_id=882ec2e8-2374-4c46-9b7f-3f4689010a99\",\n        \"price\": 27,\n        \"store\": null,\n        \"state\": null\n    },\n    {\n        \"name\": \"Kit 15 Em 1 De Ps4 Slim E Ps4 Pro Acessórios Playstation 4\",\n        \"link\": \"https://produto.mercadolivre.com.br/MLB-1466339396-kit-15-em-1-de-ps4-slim-e-ps4-pro-acessorios-playstation-4-_JM?searchVariation=52267526566#searchVariation=52267526566&position=44&type=item&tracking_id=882ec2e8-2374-4c46-9b7f-3f4689010a99\",\n        \"price\": 79,\n        \"store\": null,\n        \"state\": null\n    },\n    {\n        \"name\": \"Nacon Revolution Unlimited Pro Controller - Ps4\",\n        \"link\": \"https://produto.mercadolivre.com.br/MLB-1175945115-nacon-revolution-unlimited-pro-controller-ps4-_JM?searchVariation=32752913408#searchVariation=32752913408&position=10&type=item&tracking_id=882ec2e8-2374-4c46-9b7f-3f4689010a99\",\n        \"price\": 979,\n        \"store\": null,\n        \"state\": null\n    },\n    {\n        \"name\": \"Playstation 4 Pro 1tb Ps4 4k Biv. 2 Controles Envio Imediato\",\n        \"link\": \"https://produto.mercadolivre.com.br/MLB-1075976678-playstation-4-pro-1tb-ps4-4k-biv-2-controles-envio-imediato-_JM?searchVariation=32041146653#searchVariation=32041146653&position=13&type=item&tracking_id=882ec2e8-2374-4c46-9b7f-3f4689010a99\",\n        \"price\": 3300,\n        \"store\": null,\n        \"state\": null\n    },\n    {\n        \"name\": \"Playstation 4 Pro Ps4 1tb 4k 2 Controles 1 Ano De Garantia\",\n        \"link\": \"https://produto.mercadolivre.com.br/MLB-1070617416-playstation-4-pro-ps4-1tb-4k-2-controles-1-ano-de-garantia-_JM?searchVariation=32906102683#searchVariation=32906102683&position=23&type=item&tracking_id=882ec2e8-2374-4c46-9b7f-3f4689010a99\",\n        \"price\": 3657,\n        \"store\": null,\n        \"state\": null\n    }\n]"
+        }
+      ]
+    }
+  ],
+  "protocolProfileBehavior": {}
 }
