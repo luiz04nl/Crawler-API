@@ -11,12 +11,12 @@ export class ProductAplication {
   }
 
   /**
-   * Método que obtem as produtos
+   * Método que obtem os produtos
    * @public
    * @param {object} where - Filtro
    * @returns {Product[]}
    */
-  get(filter) {
+  async get(filter) {
     return this.productService.get(filter)
   }
 }

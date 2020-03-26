@@ -7,7 +7,7 @@ export class MercadoLivrePage {
    * @public
    */
   constructor() {
-    this.BASE_URL = 'https://www.mercadolivre.com.br'
+    this.BASE_URL = 'https://www.mercadolivre.com.br/'
   }
 
   /**
@@ -35,7 +35,7 @@ export class MercadoLivrePage {
   }
 
   /**
-   * Buscar pordutos por nome
+   * Buscar produtos por nome
    * @public
    * @param {string} name - Nome do produto
    * @returns <Promise>{any}
@@ -51,7 +51,7 @@ export class MercadoLivrePage {
   }
 
   /**
-   * Obter contúedo da página
+   * Obter conteúdo da página
    * @public
    * @returns <Promise>{any}
    */

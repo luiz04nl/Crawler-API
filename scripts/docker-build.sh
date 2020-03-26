@@ -26,7 +26,7 @@ REPOSITORY_URI=luiz04nl/$DOCKER_IMAGE_NAME
 
 docker-compose -f build-docker-compose.yml build &&
 
-# echo y | docker system prune &&
+echo y | docker system prune &&
 
 docker tag ${DOCKER_IMAGE_NAME}:latest ${DOCKER_IMAGE_NAME}:${IMAGE_TAG}
 docker tag ${DOCKER_IMAGE_NAME}:latest ${REPOSITORY_URI}:latest

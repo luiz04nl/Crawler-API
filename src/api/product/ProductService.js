@@ -12,7 +12,7 @@ export class ProductService {
   }
 
   /**
-   * Método que obtem as produtos
+   * Método que transforma o html da página de produtos em um array de produtos
    * @public
    * @param {string} html - Html content
    * @param {number} limit - limite de resultados
@@ -45,7 +45,7 @@ export class ProductService {
   }
 
   /**
-   * Método que obtem as produtos
+   * Método que obtem os produtos
    * @public
    * @param {object} filter - Filtro
    * @returns <Promise>{Product[]}
